@@ -33,6 +33,7 @@ async function init() {
         userType : "ADMIN",
         password : "Welcome1"
     });
+    
     console.log(admin);
 }
 // FOR SERVER AND PORT TO BE STARTED
