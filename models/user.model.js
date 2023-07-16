@@ -100,6 +100,18 @@ const userSchema = new mongoose.Schema(
 // Define the collection name where it will be stored *
 // *
 
+
+
+
 let User = mongoose.model("User", userSchema);
-module.export = User;
+module.exports = User;
+
+
+
+
+
+
+
+
+
 

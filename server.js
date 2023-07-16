@@ -23,10 +23,23 @@ db.once("open", () => {
 })
 
 async function init() {
+/*
+    check if the admin user is already present
+
+    */
+
+    let admin = await userModel.findOne({
+        userId : "admin"
+    })
+
+    if(admin) {
+        console.log("Admin user already present");
+        return;
+    }
     // initialize the mongo db and need to 
     // create the admin user
 
-    const admin = await userModel.create({
+    admin = await userModel.create({
         name : "Aashish Rana",
         userId : "admin",
         email : "aashishrana71135@gmail.com",
